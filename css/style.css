@@ -1,3 +1,14 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .regisForm{
-    display: block;
+    margin: 10% 20%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 13% 50% 20%;;
 } 
+
+.regisForm .labels{
+    grid-column: 1;
+}
