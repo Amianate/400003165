@@ -2,10 +2,17 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#footer{
+    text-align: center;
+    border-top: 2px solid ;
+    max-height: 10px;
+}
+
 #box{
     width: 60%;
-    height: 70%;
+    height: 80%;
     margin: auto;
+    margin-top: 5%;
     border: 2px solid;
 }
 
