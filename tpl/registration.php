@@ -12,17 +12,17 @@
             <div class="regisForm">
                 <!-- Username field and label -->
                 <label for="usernameField" class="labels">Username</label>
-                <input type="text" id="username" name="usernameField" class="inputs">
+                <input type="text" id="username" name="usernameField" class="inputs" required>
                 <br>
 
                 <!-- Email field and label -->
                 <label for="emailField" class="labels">Email</label>
-                <input type="text" id="email" name="emailField" class="inputs">
+                <input type="text" id="email" name="emailField" class="inputs" required>
                 <br>
 
                 <!-- Password field and label -->
                 <label for="pwField" class="labels">Password</label>
-                <input type="password" id="pw" name="pwField" class="inputs">
+                <input type="password" id="pw" name="pwField" class="inputs" required>
                 <br>
 
                 <input type="submit" value="Register" id="regisButton">
