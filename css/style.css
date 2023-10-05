@@ -31,25 +31,48 @@ body {
 }
 
 .header img{
-    padding: 20px;
+    margin: 20px;
 }
 
 .header a{
     position: absolute;
     top: 0;
     right: 0;
-    padding: 40px 40px;
+    margin: 40px 40px;
+}
+
+
+.header #bottomRow{
+    display: flex;
+    width: 100%;
+}
+
+#userTitle {
+    margin-left: 20%;
+}
+
+#userEmail{
+    position: absolute;
+    right: 0;
+    margin-right: 20%;
+    /* margin-left: 30%; */
 }
 
 /*
     FOOTER
 */
-#footer{
-    text-align: center;
-    border-top: 2px solid ;
-    max-height: 10px;
-}
 
+#footer{
+    position:fixed;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    border-top:1px solid;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-top: 15px;
+}
 
 /*
     REGISTRATION AND LOGIN
