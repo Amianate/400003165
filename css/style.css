@@ -35,8 +35,10 @@ body {
 }
 
 .header a{
-    align-self: flex-end;
-    padding: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 40px 40px;
 }
 
 /*
