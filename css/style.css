@@ -191,3 +191,28 @@ body {
     text-decoration: none;
     color: white;
 }
+
+/*
+    User Create Form
+*/
+
+#form{
+    display: grid;
+    align-content: center;
+    margin: 0% 20%;
+    margin-top: 5%;
+    grid-template-columns: 30% 40% 30%;
+}
+
+#form .labels{
+    text-align: right;
+    padding-right: 10px;
+    padding-top: 3px;
+    grid-column: 1;
+}
+
+#form .inputs{
+    grid-column: 2; 
+    margin-bottom: 9px;
+    padding: 4px;
+}
