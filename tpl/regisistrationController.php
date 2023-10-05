@@ -1,6 +1,6 @@
 <?php
 
-class regisValidation
+class regisistrationController
 {
     private $name;
     private $pw;
@@ -42,12 +42,21 @@ class regisValidation
             //Do something with the database
             echo password_hash($this->pw, PASSWORD_DEFAULT);
         }
+        else{
+            throw new \Exception("The password MUST include at least 1 capital letter and 1 number.");
+        }
     }
 
-    // function returnError($string)
-    // {
-    //     throw new \Exception($string);
-    // }
+    function checkName(){
+        // Get usernames here
+        // Compare current username with others stored and return the appropriate thing
+    }
+
+    function checkEmail(){
+        if (! filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
+            throw new \Exception("This is not a valid email address.");
+        }
+    }
 }
 
 
