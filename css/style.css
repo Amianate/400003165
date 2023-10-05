@@ -149,10 +149,15 @@ body {
     text-align: center;
     background-color: gray;
     margin: 2%;
-    padding: 10px 5px;
+    padding: 50px 5px;
     vertical-align: middle;
-    border-style: solid;
-    border-color: black; 
+    /* border-style: solid;
+    border-color: black;  */
+}
+
+[class*="panel-"] href{
+    height: auto;
+    width: auto;
 }
 
 .panels > div a{
