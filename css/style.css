@@ -2,14 +2,57 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/*
+    HEADER
+*/
+
+
+.header{
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+.header > p{
+    margin: 0% 0%;
+    margin-right: 10%;
+}
+
+.headerGrid #topRow{
+    grid-row: 1;
+}
+
+.headerGrid #bottomRow{
+    grid-row: 2;
+}
+
+.header #topRow{
+    width: 100;
+}
+
+/*
+    FOOTER
+*/
 #footer{
     text-align: center;
     border-top: 2px solid ;
     max-height: 10px;
 }
 
+
+/*
+    REGISTRATION AND LOGIN
+*/
+
 #box{
     width: 60%;
+    height: 80%;
+    margin: auto;
+    margin-top: 5%;
+    border: 2px solid;
+}
+
+#bigBox{
+    width: 80%;
     height: 80%;
     margin: auto;
     margin-top: 5%;
@@ -52,11 +95,13 @@ body {
     max-width: 50%;
 }
 
+/*
+    DASHBOARDS
+*/
 
 .panels{
     display: grid;
-    grid-template-columns: 50% 50%;
-    grid-auto-rows: 1fr;
+    grid-template-columns: 30% 30%;
 
 }
 
@@ -66,7 +111,7 @@ body {
     align-items:center;
     text-align: center;
     background-color: gray;
-    margin: 5%;
+    margin: 2%;
     vertical-align: middle;
     border-style: solid;
     border-color: black; 
@@ -76,3 +121,5 @@ body {
     text-decoration: none;
     color: white;
 }
+
+
