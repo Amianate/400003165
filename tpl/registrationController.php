@@ -43,7 +43,7 @@ class regisistrationController
             echo password_hash($this->pw, PASSWORD_DEFAULT);
         }
         else{
-            throw new \Exception("The password MUST include at least 1 capital letter and 1 number.");
+            throw new \Exception("Password MUST include 1 capital letter and 1 number minimum.");
         }
     }
 

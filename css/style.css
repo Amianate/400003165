@@ -142,7 +142,7 @@ body {
     max-width: 50%;
 }
 
-p#pwErr{
+.errMessages{
     color: red;
     font-size: x-small;
 }
