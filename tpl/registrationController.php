@@ -48,7 +48,11 @@ class regisistrationController
     }
 
     function checkName(){
-        // Get usernames here
+        $response = include_once "registrationModel.php";
+        if(isset($response)){            
+            throw new \Exception($response);
+        }
+
         // Compare current username with others stored and return the appropriate thing
     }
 

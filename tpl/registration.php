@@ -14,6 +14,16 @@
                 <label for="usernameField" class="labels">Username</label>
                 <input type="text" id="username" name="usernameField" class="inputs" required>
 
+                <!-- Looking for error message and printing it if found -->
+                <p id="nameErr" class="errMessages">
+                    <?php
+                        if (isset($_GET['email'])) {
+                            $error_message = urldecode($_GET['name']);
+                            echo "Error: " . $error_message;
+                        } 
+                    ?>
+                </p>
+
                 <!-- Email field and label -->
                 <label for="emailField" class="labels">Email</label>
                 <input type="text" id="email" name="emailField" class="inputs" required>
