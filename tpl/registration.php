@@ -13,7 +13,6 @@
                 <!-- Username field and label -->
                 <label for="usernameField" class="labels">Username</label>
                 <input type="text" id="username" name="usernameField" class="inputs" required>
-                <br>
 
                 <!-- Email field and label -->
                 <label for="emailField" class="labels">Email</label>
@@ -23,7 +22,16 @@
                 <!-- Password field and label -->
                 <label for="pwField" class="labels">Password</label>
                 <input type="password" id="pw" name="pwField" class="inputs" required>
-                <br>
+                
+                <!-- Looking for error message and printing it if found -->
+                <p id="pwErr">
+                    <?php
+                        if (isset($_GET['pw'])) {
+                            $error_message = urldecode($_GET['pw']);
+                            echo "Error: " . $error_message;
+                        } 
+                    ?>
+                </p>
 
                 <input type="submit" value="Register" id="regisButton">
 
@@ -37,6 +45,3 @@
 
 <html>
 
-<?php
-session_start();
-?>

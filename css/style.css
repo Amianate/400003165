@@ -111,7 +111,7 @@ body {
     align-self: center;
     text-align: center;
     display: grid;
-    grid-template-columns: 30% 50% 20%;
+    grid-template-columns: 30% 30% 40%;
 } 
 
 .regisForm .labels{
@@ -142,7 +142,10 @@ body {
     max-width: 50%;
 }
 
-
+p#pwErr{
+    color: red;
+    font-size: x-small;
+}
 
 
 
