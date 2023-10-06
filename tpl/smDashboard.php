@@ -3,14 +3,15 @@
 <head>
     <link rel="stylesheet" href="../css/style.css">
     <?php session_start();
-
-    if ($_SESSION["role"] == "Research Group Manager") {
-        header("Location: gmDashboard.php");
-        exit();
-    } else 
-    if ($_SESSION["role"] == "Researcher") {
-        header("Location: researcher.php");
-        exit();
+    if (isset($_SESSION["role"])) {
+        if ($_SESSION["role"] == "Research Group Manager") {
+            header("Location: gmDashboard.php");
+            exit();
+        } else
+            if ($_SESSION["role"] == "Researcher") {
+            header("Location: researcher.php");
+            exit();
+        }
     }
     ?>
 </head>

@@ -5,16 +5,21 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>User Creation</title>
     <?php
-        session_start();
-        if($_SESSION["role"] == "Research Study Manager"){
-            header("Location: smDashboard.php");             
-            exit();         
-        }
-        else 
-        if($_SESSION["role"] == "Researcher"){
-            header("Location: researcher.php");             
+    session_start();
+    if (isset($_SESSION["role"])) {
+        if ($_SESSION["role"] == "Research Study Manager") {
+            header("Location: smDashboard.php");
+            exit();
+        } else 
+        if ($_SESSION["role"] == "Researcher") {
+            header("Location: researcher.php");
             exit();
         }
+    }
+    else{
+        header("Location: login.php");
+            exit();
+    }
     ?>
 </head>
 

@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <?php session_start();
     
+    if (isset($_SESSION["role"])) {
         if($_SESSION["role"] == "Research Study Manager"){
             header("Location: smDashboard.php");             
             exit();         
@@ -13,6 +14,11 @@
             header("Location: researcher.php");             
             exit();
         }
+    }
+    else{
+        header("Location: login.php");
+            exit();
+    }
     ?>
 
 </head>
