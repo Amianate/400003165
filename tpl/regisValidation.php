@@ -7,7 +7,7 @@ $dbObj = new database();
 
 $dbConnection = $dbObj->createConnection();
 
-$regController = new regisistrationController();
+$regController = new registrationController();
 
 
 // Trying and catching any username errors
@@ -41,3 +41,8 @@ catch(\Exception $e){
     header("Location: registration.php?pw=" . $querystring);
     exit();
 }
+
+
+// If no errors are caught:
+header("Location: login.html");
+    exit();

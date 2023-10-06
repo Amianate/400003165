@@ -142,7 +142,13 @@ body {
     max-width: 50%;
 }
 
+#loginErr{
+    text-align: center;
+    grid-column: 2;
+}
+
 .errMessages{
+    font-weight: bold;
     color: red;
     font-size: x-small;
 }

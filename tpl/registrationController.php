@@ -1,14 +1,12 @@
 <?php
 
-class regisistrationController
+class registrationController
 {
-    private $name;
     private $pw;
     private $email;
 
     function __construct()
     {
-            $this->name = $_POST["usernameField"];
             $this->pw = $_POST["pwField"];
             $this->email = $_POST["emailField"];
     }
