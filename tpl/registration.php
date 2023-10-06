@@ -17,7 +17,7 @@
                 <!-- Looking for error message and printing it if found -->
                 <p id="nameErr" class="errMessages">
                     <?php
-                        if (isset($_GET['email'])) {
+                        if (isset($_GET['name'])) {
                             $error_message = urldecode($_GET['name']);
                             echo "Error: " . $error_message;
                         } 

@@ -47,14 +47,18 @@ class regisistrationController
         }
     }
 
+
+
     function checkName(){
-        $response = include_once "registrationModel.php";
+        include_once "registrationModel.php";
+        
+        $response = searchUsername();
         if(isset($response)){            
             throw new \Exception($response);
         }
-
-        // Compare current username with others stored and return the appropriate thing
     }
+
+
 
     function checkEmail(){
         if (! filter_var($this->email, FILTER_VALIDATE_EMAIL)) {

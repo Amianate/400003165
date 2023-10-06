@@ -9,6 +9,7 @@ $dbConnection = $dbObj->createConnection();
 
 $regController = new regisistrationController();
 
+
 // Trying and catching any username errors
 try{
     $regController->checkName();
@@ -19,6 +20,7 @@ catch(\Exception $e){
     exit();
 }
 
+
 // Trying and catching any email errors
 try{
     $regController->checkEmail();
@@ -28,6 +30,7 @@ catch(\Exception $e){
     header("Location: registration.php?email=" . $querystring);
     exit();
 }
+
 
 // Trying and catching any password errors
 try{
