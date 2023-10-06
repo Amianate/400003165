@@ -11,7 +11,7 @@
             <div class="regisForm">
 
                 <!-- Looking for error message and printing it if found -->
-                <p id="loginErr" class="errMessages">
+                <p id="topErr" class="errMessages">
                     <?php
                     if (isset($_GET['error'])) {
                         $error_message = urldecode($_GET['error']);

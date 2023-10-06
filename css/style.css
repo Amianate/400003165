@@ -142,7 +142,7 @@ body {
     max-width: 50%;
 }
 
-#loginErr{
+#topErr{
     text-align: center;
     grid-column: 2;
 }

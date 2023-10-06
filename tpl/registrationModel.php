@@ -8,10 +8,31 @@ function searchUsername()
     $dbConnection = $dbObj->createConnection();
 
     $query = "SELECT * FROM `users` WHERE username = '" . $_REQUEST['usernameField'] .  "';";
-    
+
     $results = $dbConnection->query($query);
 
     if ($results->num_rows > 0) {
         return "Your username is not unique.";
     }
+}
+
+function insertUser()
+{
+    require_once "getDb.php";
+
+    $dbObj = new database();
+
+    try {
+        $dbConnection = $dbObj->createConnection();
+        $username = $_REQUEST['usernameField'];
+        $pw = $_REQUEST['pwField'];
+        $email = $_REQUEST['emailField'];
+
+        // Adding the user to the database as a researcher by default 
+        $query = "INSERT INTO `users`(`id`, `username`, `password`, `email`, `role`) VALUES ('NULL','" . $username ."' ,'" . $pw ."','". $email ."','Researcher')";
+        $results = $dbConnection->query($query);
+        
+    } catch (\Exception $e) {
+        return "Could not insert new user.";
+     }
 }

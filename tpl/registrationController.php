@@ -1,5 +1,6 @@
 <?php
 
+include_once "registrationModel.php";
 class registrationController
 {
     private $pw;
@@ -47,9 +48,7 @@ class registrationController
 
 
 
-    function checkName(){
-        include_once "registrationModel.php";
-        
+    function checkName(){        
         $response = searchUsername();
         if(isset($response)){            
             throw new \Exception($response);
@@ -63,7 +62,17 @@ class registrationController
             throw new \Exception("This is not a valid email address.");
         }
     }
+
+    function registerUser(){
+        $response = insertUser();
+
+        if(isset($response)){
+            throw new \Exception($response);
+        }
+    }
 }
+
+
 
 
     // echo $_POST["usernameField"];
