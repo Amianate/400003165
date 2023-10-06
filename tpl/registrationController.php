@@ -37,11 +37,7 @@ class registrationController
             }
         } 
 
-        if($capFlag == true && $numFlag == true){
-            //Do something with the database
-            echo password_hash($this->pw, PASSWORD_DEFAULT);
-        }
-        else{
+        if($capFlag == false && $numFlag == false){
             throw new \Exception("Password MUST include 1 capital letter and 1 number minimum.");
         }
     }

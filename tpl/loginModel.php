@@ -8,24 +8,70 @@ function findPw()
     $dbConnection = $dbObj->createConnection();
 
     $query = "SELECT users.password FROM users;";
-    
+
     $results = $dbConnection->query($query);
 
-    if ($results->num_rows < 0) {
-
+    if ($results->num_rows > 0) {
         // If the password matches the hashed one stored
-        foreach ($result as $row) {
+        foreach ($results as $row) {
 
-            if(password_verify($_REQUEST['pwField'], $row['password'])){
+            if (password_verify($_REQUEST['pwField'], $row['password'])) {
                 return true;
             };
         }
-    }
-    else{
+    } else {
         return false;
     }
 }
 
-function findEmail(){
+function findEmail()
+{
+    require_once "getDb.php";
+
+    $dbObj = new database();
+    $dbConnection = $dbObj->createConnection();
+
+    $query = "SELECT * FROM `users` WHERE email = ?";
+    $statement = $dbConnection->prepare($query);
+    $statement->bind_param("s", $_REQUEST['emailField']);
+
+    if ($statement->execute()) {
+        $result = $statement->get_result();
+
+        // Check if a row was found
+        if ($result->num_rows > 0) {
+            session_start();
+
+            $row = $result->fetch_assoc();
+
+            // Placing the user information into the session variables
+            $_SESSION["username"] = $row['username'];
+            $_SESSION["pw"] = $row['password'];
+            $_SESSION["email"] = $row['email'];
+            $_SESSION["role"] = $row['role'];
+
+            $statement->close();
+            return true;
+        }
+    } 
+    else {
+        $statement->close();
+        return false;
+    }
+
+    // What to do if an entry is found
+    // if ($results->num_rows > 0) {
+    //     session_start();
+
+    //     $row = $result->fetch_assoc();
+
+    //     // Placing the user information into the session variables
+    //     $_SESSION["username"] = $results['username'];
+    //     $_SESSION["pw"] = $results['password'];
+    //     $_SESSION["email"] = $results['email'];
+    //     $_SESSION["role"] = $results['role'];
+    //     return true;
+
+    // What to do if an entry is not found
 
 }

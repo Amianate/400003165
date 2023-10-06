@@ -15,7 +15,7 @@ class loginController
         include_once "loginModel.php";
 
         if(!findPw()){
-            throw new \Exception("Invalid email/password");
+            throw new \Exception("Invalid password");
         }
     }
 

@@ -25,11 +25,11 @@ function insertUser()
     try {
         $dbConnection = $dbObj->createConnection();
         $username = $_REQUEST['usernameField'];
-        $pw = $_REQUEST['pwField'];
+        $pw = password_hash($_REQUEST['pwField'], PASSWORD_DEFAULT);
         $email = $_REQUEST['emailField'];
 
         // Adding the user to the database as a researcher by default 
-        $query = "INSERT INTO `users`(`id`, `username`, `password`, `email`, `role`) VALUES ('NULL','" . $username ."' ,'" . $pw ."','". $email ."','Researcher')";
+        $query = "INSERT INTO `users`(`id`, `username`, `password`, `email`, `role`) VALUES ('NULL','" . $username ."' ,'" . $pw ."','". $email ."','Research Group Manager')";
         $results = $dbConnection->query($query);
         
     } catch (\Exception $e) {
