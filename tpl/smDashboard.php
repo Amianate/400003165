@@ -2,8 +2,17 @@
 
 <head>
     <link rel="stylesheet" href="../css/style.css">
-    <?php session_start()?>
+    <?php session_start();
 
+    if ($_SESSION["role"] == "Research Group Manager") {
+        header("Location: gmDashboard.php");
+        exit();
+    } else 
+    if ($_SESSION["role"] == "Researcher") {
+        header("Location: researcher.php");
+        exit();
+    }
+    ?>
 </head>
 
 <body>
@@ -11,7 +20,7 @@
         <div id="topRow">
             <img src="../circle.jpg" alt="Plain circle" width="70px" height="70px">
 
-            <a href="" id="logout">Log out</a>
+            <a href="logout.php" id="logout">Log out</a>
         </div>
 
         <div id="bottomRow">

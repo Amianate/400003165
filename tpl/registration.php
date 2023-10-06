@@ -4,6 +4,14 @@
 <head>
     <link rel="stylesheet" href="../css/style.css">
     <title>User Registration</title>
+
+    <?php
+        session_start();
+        if(isset($_SESSION["role"])){
+            header("Location: AlreadyLoggedIn.php");             
+            exit();         
+        }
+    ?>
 </head>
 
 <body>

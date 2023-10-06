@@ -3,13 +3,27 @@
 
 <head>
     <link rel="stylesheet" href="../css/style.css">
-    <title>User Registration</title>
+    <title>User Creation</title>
+    <?php
+        session_start();
+        if($_SESSION["role"] == "Research Study Manager"){
+            header("Location: smDashboard.php");             
+            exit();         
+        }
+        else 
+        if($_SESSION["role"] == "Researcher"){
+            header("Location: researcher.php");             
+            exit();
+        }
+    ?>
 </head>
 
 <body>
     <div id="box">
-        <form action="regisValidation.php" method="post">
+        <form action="createUserValidation.php" method="post">
             <div class="regisForm">
+
+                <h1 class="title">Create User</h1>
 
                 <!-- Where errors with inserting the user are displayed  -->
                 <p id="loginErr" class="errMessages">
@@ -63,6 +77,12 @@
                     ?>
                 </p>
 
+                <!-- role select field and label -->
+                <label for="roleField" class="labels">Role</label>
+                <select name="roleField" id="role" class="inputs">
+                    <option value="Researcher">Researcher</option>
+                    <option value="Research Study Manager">Research Study Manager</option>
+                </select>
                 <input type="submit" value="Register" id="regisButton">
 
             </div>

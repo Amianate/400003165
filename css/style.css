@@ -5,7 +5,6 @@ body {
 
 
 
-
 /*
     HEADER
 */
@@ -108,6 +107,7 @@ body {
 
 .regisForm{
     margin: 20% 20%;
+    margin-top: 0%;
     align-self: center;
     text-align: center;
     display: grid;
@@ -152,6 +152,15 @@ body {
     color: red;
     font-size: x-small;
 }
+
+.title{
+    color: darkolivegreen;
+    display: flex;
+    /* grid-column-start: 1; */
+    grid-column-end: 3;
+    text-align: center;
+}
+
 
 
 
@@ -224,4 +233,15 @@ body {
     grid-column: 2; 
     margin-bottom: 9px;
     padding: 4px;
+}
+
+/* 
+    ALREADYLOGGEDIN
+*/
+.already{
+    text-align: center;
+}
+
+.already h1{
+    color: darkolivegreen;
 }

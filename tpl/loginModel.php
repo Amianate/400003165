@@ -59,19 +59,4 @@ function findEmail()
         return false;
     }
 
-    // What to do if an entry is found
-    // if ($results->num_rows > 0) {
-    //     session_start();
-
-    //     $row = $result->fetch_assoc();
-
-    //     // Placing the user information into the session variables
-    //     $_SESSION["username"] = $results['username'];
-    //     $_SESSION["pw"] = $results['password'];
-    //     $_SESSION["email"] = $results['email'];
-    //     $_SESSION["role"] = $results['role'];
-    //     return true;
-
-    // What to do if an entry is not found
-
 }
