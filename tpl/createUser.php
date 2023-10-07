@@ -7,6 +7,7 @@
     <?php
     session_start();
     if (isset($_SESSION["role"])) {
+
         if ($_SESSION["role"] == "Research Study Manager") {
             header("Location: smDashboard.php");
             exit();
@@ -15,10 +16,9 @@
             header("Location: researcher.php");
             exit();
         }
-    }
-    else{
+    } else {
         header("Location: login.php");
-            exit();
+        exit();
     }
     ?>
 </head>

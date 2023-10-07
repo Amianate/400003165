@@ -1,5 +1,6 @@
 <?php
 
+include "loginModel.php";
 class loginController
 {
     // private $pw;
@@ -12,30 +13,25 @@ class loginController
     }
 
     function checkPw(){
-        include_once "loginModel.php";
+        $modelObj = new loginModel();
 
-        if(!findPw()){
-            throw new \Exception("Invalid password");
+        if(!$modelObj->findPw()){
+            throw new \Exception("Invalid email/password");
         }
     }
 
     function checkEmail(){        
-        include_once "loginModel.php";
+        $modelObj = new loginModel();
         
         // Checking if the email is valid
         if (! filter_var($this->email, FILTER_VALIDATE_EMAIL)) {
             throw new \Exception("Invalid email/password");
         }
         // Checking for the password in the database
-        if (!findEmail()){
+        if (!$modelObj->findEmail()){
             throw new \Exception("Invalid email/password");
         }
 
 
     }
 }
-
-
-    // echo $_POST["usernameField"];
-    // echo $_POST["emailField"];
-    // echo $_POST["pwField"];

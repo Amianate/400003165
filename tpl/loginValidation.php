@@ -4,7 +4,6 @@ require_once "getDb.php";
 require_once "loginController.php";
 
 $dbObj = new database();
-
 $dbConnection = $dbObj->createConnection();
 
 $logController = new loginController();

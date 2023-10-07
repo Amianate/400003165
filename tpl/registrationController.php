@@ -1,6 +1,7 @@
 <?php
 
 include_once "registrationModel.php";
+
 class registrationController
 {
     private $pw;
@@ -45,7 +46,9 @@ class registrationController
 
 
     function checkName(){        
-        $response = searchUsername();
+        $modelObj = new registrationModel();
+
+        $response = $modelObj->searchUsername();
         if(isset($response)){            
             throw new \Exception($response);
         }
@@ -60,7 +63,9 @@ class registrationController
     }
 
     function registerUser(){
-        $response = insertUser();
+    $modelObj = new registrationModel();    
+
+        $response = $modelObj->insertUser();
 
         if(isset($response)){
             throw new \Exception($response);

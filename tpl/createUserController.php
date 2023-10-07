@@ -47,7 +47,8 @@ class createUserController
 
     function checkName()
     {
-        $response = searchUsername();
+        $modelObj = new createUserModel();
+        $response = $modelObj->searchUsername();
         if (isset($response)) {
             throw new \Exception($response);
         }
@@ -63,7 +64,9 @@ class createUserController
 
     function registerUser()
     {
-        $response = insertUser();
+        $modelObj = new createUserModel();
+
+        $response = $modelObj->insertUser();
 
         if (isset($response)) {
             throw new \Exception($response);
