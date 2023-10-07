@@ -5,7 +5,6 @@ class createUserController
 {
     private $pw;
     private $email;
-    private $role;
 
     function __construct()
     {
