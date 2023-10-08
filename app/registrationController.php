@@ -1,7 +1,6 @@
 <?php
 
-include_once "registrationModel.php";
-
+include "autoloader.php";
 class registrationController
 {
     private $pw;

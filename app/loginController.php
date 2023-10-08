@@ -1,6 +1,6 @@
 <?php
 
-include "loginModel.php";
+include "autoloader.php";
 class loginController
 {
     // private $pw;

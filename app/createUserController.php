@@ -1,6 +1,6 @@
 <?php
 
-include_once "createUserModel.php";
+include "autoloader.php";
 class createUserController
 {
     private $pw;
