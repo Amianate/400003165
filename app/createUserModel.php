@@ -4,7 +4,7 @@ class createUserModel{
     
     function searchUsername()
     {
-        require_once "getDb.php";
+        require_once "database.php";
 
         $dbObj = new database();
         $dbConnection = $dbObj->createConnection();
@@ -20,7 +20,7 @@ class createUserModel{
 
     function insertUser()
     {
-        require_once "getDb.php";
+        require_once "database.php";
 
         $dbObj = new database();
         $dbConnection = $dbObj->createConnection();

@@ -1,7 +1,6 @@
 <?php
 
-require_once "getDb.php";
-require_once "createUserController.php";
+include "autoloader.php";
 
 $dbObj = new database();
 

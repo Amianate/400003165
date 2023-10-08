@@ -5,7 +5,7 @@ class loginModel
 {
     function findPw()
     {
-        require_once "getDb.php";
+        require_once "database.php";
 
         $dbObj = new database();
         $dbConnection = $dbObj->createConnection();
@@ -29,7 +29,7 @@ class loginModel
 
     function findEmail()
     {
-        require_once "getDb.php";
+        require_once "database.php";
 
         $dbObj = new database();
         $dbConnection = $dbObj->createConnection();

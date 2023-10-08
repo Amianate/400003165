@@ -24,6 +24,44 @@
 </head>
 
 <body>
+    <div id="header" class="header">
+        <div id="topRow">
+            <img src="../circle.jpg" alt="Plain circle" width="70px" height="70px">
+
+            <a href="logout.php" id="logout">Log out</a> <br>
+            <a href="gmDashboard.php" id="dashButton"> Back to dashboard </a>
+        </div>
+
+        <div id="bottomRow">
+            <p id="userTitle">
+                Research Study Manager:
+
+                <?php
+                // Displaying the username from session variables
+                if (isset($_SESSION["username"])) {
+                    echo $_SESSION["username"];
+                } else {
+                    echo "ERROR.";
+                }
+                ?>
+            </p>
+
+            <p id="userEmail">
+                Email:
+
+                <?php
+                // Displaying the email from session variables
+
+                if (isset($_SESSION["email"])) {
+                    echo $_SESSION["email"];
+                } else {
+                    echo "ERROR.";
+                }
+                ?>
+            </p>
+        </div>
+    </div>
+
     <div id="box">
         <form action="createUserValidation.php" method="post">
             <div class="regisForm">
@@ -88,8 +126,8 @@
                     <option value="Researcher">Researcher</option>
                     <option value="Research Study Manager">Research Study Manager</option>
                 </select>
-                <input type="submit" value="Register" id="regisButton">
-
+                <input type="submit" value="Register" id="regisButton"> 
+                
             </div>
         </form>
         <div id="footer">

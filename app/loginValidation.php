@@ -1,7 +1,5 @@
 <?php
-
-require_once "getDb.php";
-require_once "loginController.php";
+include "autoloader.php";
 
 $dbObj = new database();
 $dbConnection = $dbObj->createConnection();
