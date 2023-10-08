@@ -6,11 +6,11 @@
     <title>User Registration</title>
 
     <?php
-        session_start();
-        if(isset($_SESSION["role"])){
-            header("Location: AlreadyLoggedIn.php");             
-            exit();         
-        }
+    session_start();
+    if (isset($_SESSION["role"])) {
+        header("Location: AlreadyLoggedIn.php");
+        exit();
+    }
     ?>
 </head>
 
@@ -18,6 +18,8 @@
     <div id="box">
         <form action="regisValidation.php" method="post">
             <div class="regisForm">
+
+                <h1 class="title">User Registration</h1>
 
                 <!-- Where errors with inserting the user are displayed  -->
                 <p id="loginErr" class="errMessages">
@@ -72,6 +74,12 @@
                 </p>
 
                 <input type="submit" value="Register" id="regisButton">
+
+                
+                <div></div>
+                <div></div>
+
+                <p id="regisLink">Have an account? <br> <a href="login.php">Login</a></p>
 
             </div>
         </form>
