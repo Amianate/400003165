@@ -31,7 +31,7 @@ class RegistrationModel
             $email = $_REQUEST['emailField'];
 
             // Adding the user to the database as a researcher by default 
-            $query = "INSERT INTO `users`(`id`, `username`, `password`, `email`, `role`) VALUES ('NULL','" . $username . "' ,'" . $pw . "','" . $email . "','Research Group Manager')";
+            $query = "INSERT INTO `users`(`id`, `username`, `password`, `email`, `role`) VALUES ('NULL','" . $username . "' ,'" . $pw . "','" . $email . "','Researcher')";
             $results = $dbConnection->query($query);
         } catch (\Exception $e) {
             return "Could not insert new user.";

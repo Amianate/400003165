@@ -79,7 +79,7 @@
                 <div></div>
                 <div></div>
 
-                <p id="regisLink">Have an account? <br> <a href="login.php">Login</a></p>
+                <p id="regisLink">Have an account? <br> <a href="login.php">Register</a></p>
 
             </div>
         </form>
